@@ -1,137 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-
-body{
-font-family: 'Roboto', sans-serif;
-display: grid;
-height: 100vh;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(6, 1fr);
-font-size: clamp(14px, 1.5vw, 16px);
+body {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    /* Fluid typography: scales between 14px and 16px */
+    font-size: clamp(14px, 1.5vw, 16px);
 }
-header{
+
+header {
     grid-column: 2 / 5;
     grid-row: 1;
     display: flex;
     flex-direction: row-reverse;
     background-color: rgb(252, 252, 252);
-    justify-content: space-between ;
+    justify-content: space-between;
+    /* Using grid in header */
     display: grid;
-    grid-template-columns: repeat(3 ,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px 100px;
     align-items: center;
     padding: 10px;
     background-color: #f0f0f0;
-    
 }
-.form-sec{
+
+.form-sec {
     grid-column: 1 / 3;
-    margin-bottom: 20px;
-   
 }
-.form-sec form{
+
+.form-sec form {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.form-sec input{
+
+.form-sec input {
     width: 70%;
     height: 30px;
     border-radius: 15px;
-   
+    margin-top: 5px;
 }
 
-.form-sec button{
+.form-sec button {
     border: none;
 }
 
-
-.hello-sec{
+.hello-sec {
     grid-column: 1 / 4;
-   display: flex;
-   justify-content: space-between;
-   align-items: center; 
-   gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
-.profile-sec{
-display: flex;
 
+.profile-sec {
+    display: flex;
+}
 
-}
-.profile-sec img{
-    margin-top: 20px;
-}
-.txt-sec{
+.txt-sec {
     display: flex;
     flex-direction: column;
-   margin-top: 50px;
-   font-weight: bold;
-   
-   
+    margin-top: 50px;
+    font-weight: bold;
 }
+
 .txt-sec p {
- margin-bottom: 10px;
+    margin-bottom: 10px;
 }
-.actions{
+
+.actions {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     width: 420px;
     height: 50px;
-    margin-top:30px;
-   gap: 15px;
+    margin-top: 30px;
+    gap: 10px;
 }
-.actions button{
-    width: clamp(70px, 20vw, 80px);
-  height: clamp(35px, 10vw, 40px);
+
+.actions button {
+    width: 80px;
+    height: 40px;
     border-radius: 10px;
     background-color: rgb(85, 85, 235);
     color: white;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
 }
-.actions button:hover{
-    background-color: rgb(32, 238, 245);
-}
- 
-.logo-sec{
+
+.logo-sec {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-
 }
- .logo-sec img,button{
-    margin: 10px;
- }   
 
-.logo-sec img{
+.logo-sec img,
+button {
+    margin: 10px;
+}
+
+.logo-sec img {
     border-radius: 60px;
-    
     width: 90px;
     height: 90px;
     background: none;
     background-color: transparent;
 }
-.logo-sec button{
+
+.logo-sec button {
     border-radius: 50px;
     border: none;
     cursor: pointer;
-    
-   
 }
-.logo-sec button > img{
+
+.logo-sec button > img {
     width: 40px;
     height: 40px;
 }
 
-
-.sidebar{
+.sidebar {
     grid-column: 1;
     grid-row: 1 / 6;
     height: 100vh;
@@ -140,14 +132,12 @@ display: flex;
     grid-template-rows: auto repeat(9, 1fr);
     padding: 20px;
     gap: 15px;
-
 }
 
-.sidebar div:first-child{
+.sidebar div:first-child {
     display: flex;
-    align-items: center;  
+    align-items: center;
     margin-bottom: 20px;
-   
 }
 
 .sidebar h2 {
@@ -155,6 +145,7 @@ display: flex;
     margin-top: 10px;
     margin-left: 20px;
 }
+
 .sidebar div a {
     display: flex;
     align-items: center;
@@ -166,7 +157,8 @@ display: flex;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
-.sidebar div:nth-child(6){
+
+.sidebar div:nth-child(6) {
     margin-bottom: 30px;
 }
 
@@ -178,32 +170,31 @@ display: flex;
 .sidebar div a img {
     width: 40px;
     height: 40px;
-   
 }
-aside div a > img{
+
+aside div a > img {
     width: 90px;
     height: 90px;
 }
 
-main{
-    grid-row: 2/ 6;
-    grid-column:2 / 5 ;
+main {
+    grid-row: 2 / 6;
+    grid-column: 2 / 5;
 }
 
-.main-container{
- background-color: lightgray;
+.main-container {
+    background-color: lightgray;
     padding: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    "card side"
-    "card side"
+        "card side"
+        "card side"
     ;
-    
 }
 
-.card-sec{
+.card-sec {
     display: grid;
     grid-template-columns: repeat(2, 500px);
     grid-template-rows: repeat(3, 200px);
@@ -211,7 +202,7 @@ main{
     grid-area: card;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -220,14 +211,9 @@ main{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-}
-.card:active{
-    transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -243,13 +229,15 @@ main{
     height: 24px;
     cursor: pointer;
 }
-.side-container{
+
+.side-container {
     display: grid;
     grid-template-columns: 1fr;
-   grid-area: side;
-   margin-left: 100px;
+    grid-area: side;
+    margin-left: 100px;
 }
-.announcement{
+
+.announcement {
     background-color: whitesmoke;
     border-radius: 20px;
     display: flex;
@@ -257,9 +245,8 @@ main{
     justify-content: space-around;
     font-size: 16px;
     padding: 20px;
-    
+    width: 400px;
     margin-bottom: 30px;
-    
 }
 
 .trending {
@@ -272,13 +259,13 @@ main{
     gap: 15px;
 }
 
-/* Title Styling */
+/* Title Styling for Trending */
 .trending h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-/* Individual User Entries */
+/* Individual User Entries in Trending */
 .users {
     display: flex;
     align-items: center;
@@ -288,14 +275,12 @@ main{
     transition: background-color 0.3s ease;
 }
 
-/* Profile Image */
 .users img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-/* User Info */
 .users div {
     display: flex;
     flex-direction: column;
@@ -311,37 +296,34 @@ main{
     color: #6C757D;
 }
 
-/* Hover Effect */
 .users:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+/* Media Query: Responsive Adjustments for Smaller Screens */
 @media (max-width: 768px) {
-    body{
+    /* Make the entire grid single-column layout */
+    body {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-
-    header{
-        grid-template-columns: 1fr;
-
+    header {
+        grid-template-columns: 1fr; /* Stack header items vertically */
     }
-    main{
+    main {
         grid-column: 1;
-
     }
-
-    .main-container{
+    .main-container {
+        grid-template-columns: 1fr;  /* Cards and side container stack */
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "card"
+            "side";
+    }
+    .card-sec {
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "card"
-        "side"
-        ;
     }
-    .card-sec{
-        grid-template-columns: 1fr;
-
-    }
-    .side-container{
+    .side-container {
         margin-left: 0;
     }
 }
