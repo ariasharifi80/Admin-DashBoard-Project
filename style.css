@@ -126,7 +126,7 @@ display: flex;
     grid-row: 1 / 6;
     height: 100vh;
     color: white;
-    background-color: #1e4ba0;
+    background-color: #487cdd;
     grid-template-rows: auto repeat(9, 1fr);
     padding: 20px;
     gap: 15px;
@@ -175,27 +175,34 @@ main{
 .main-container{
  background-color: lightgray;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "card side"
+    "card side"
+    ;
     
 }
-.main-container h2{
-    margin: 20px;
-}
+
 .card-sec{
     display: grid;
     grid-template-columns: repeat(2, 500px);
     grid-template-rows: repeat(3, 200px);
     gap: 20px;
+    grid-area: card;
 }
 
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .card:hover{
@@ -217,5 +224,72 @@ main{
 .side-container{
     display: grid;
     grid-template-columns: 1fr;
-   
+   grid-area: side;
+   margin-left: 100px;
+}
+.announcement{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 16px;
+    padding: 20px;
+    width: 400px;
+    margin-bottom: 30px;
+    
+}
+
+.trending {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Title Styling */
+.trending h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Individual User Entries */
+.users {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Profile Image */
+.users img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* User Info */
+.users div {
+    display: flex;
+    flex-direction: column;
+}
+
+.users h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.users p {
+    font-size: 14px;
+    color: #6C757D;
+}
+
+/* Hover Effect */
+.users:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
